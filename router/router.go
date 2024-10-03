@@ -5,7 +5,6 @@ import (
 	"github.com/google/uuid"
 	"html"
 	"mathb-go/db"
-	"net/http"
 	"time"
 )
 
@@ -33,7 +32,7 @@ func RegisterRouters(engine *gin.Engine) {
 			CreatedAt: time.Time{},
 		}
 		db.PasteTx.MustCreate(&paste)
-		c.Redirect(http.StatusTemporaryRedirect, "/"+paste.UUID)
+		c.Redirect(302, "/"+paste.UUID)
 	})
 	engine.GET("/", func(c *gin.Context) {
 		c.HTML(200, "mathb.html", MathBData{})
