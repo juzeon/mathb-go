@@ -19,6 +19,18 @@ MathB is a mathematics pastebin software, a [MathB](https://github.com/susam/mat
 - No web cookies.
 - No web analytics.
 
+## Deployment
+
+Requirement: Go 1.23+
+
+```
+git clone https://github.com/juzeon/mathb-go.git
+cd mathb-go/
+go build
+./mathb-go
+# Visit: http://localhost:7156/
+```
+
 ## Print
 
 While the primary purpose of this project is to allow users to write mathematical snippets, save them, and share a link to them with others, the stylesheet used in this project takes special care to allow printing beautifully rendered pages to paper.
