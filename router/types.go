@@ -1,12 +1,14 @@
 package router
 
+import "html/template"
+
 type MathBData struct {
-	Class string
-	Code  string
-	Title string
-	Name  string
-	Error string
-	Date  string
+	Class template.HTMLAttr
+	Code  template.HTML
+	Title template.HTML
+	Name  template.HTML
+	Error template.HTML
+	Date  template.HTML
 }
 
 type CreatePostData struct {

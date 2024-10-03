@@ -3,10 +3,14 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/microcosm-cc/bluemonday"
 	"html"
+	"html/template"
 	"mathb-go/db"
 	"time"
 )
+
+var ugcPolicy = bluemonday.UGCPolicy()
 
 func RegisterRouters(engine *gin.Engine) {
 	engine.Static("/css", "web/css")
@@ -28,7 +32,7 @@ func RegisterRouters(engine *gin.Engine) {
 			UUID:      uuid.New().String(),
 			Title:     html.EscapeString(postData.Title),
 			Name:      html.EscapeString(postData.Name),
-			Code:      html.EscapeString(postData.Code),
+			Code:      ugcPolicy.Sanitize(postData.Code),
 			CreatedAt: time.Time{},
 		}
 		db.PasteTx.MustCreate(&paste)
@@ -58,10 +62,10 @@ func getPaste(c *gin.Context) {
 	}
 	c.HTML(200, "mathb.html", MathBData{
 		Class: "class='post'",
-		Code:  paste.Code,
-		Title: paste.Title,
-		Name:  paste.Name,
+		Code:  template.HTML(paste.Code),
+		Title: template.HTML(paste.Title),
+		Name:  template.HTML(paste.Name),
 		Error: "",
-		Date:  paste.CreatedAt.Format(time.DateTime),
+		Date:  template.HTML(paste.CreatedAt.Format(time.DateTime)),
 	})
 }
