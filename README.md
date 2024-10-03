@@ -7,7 +7,8 @@ MathB-Go is a mathematics pastebin software, a [MathB](https://github.com/susam/
 - Rewritten in Go and [Gin](https://github.com/gin-gonic/gin).
 - User input sanitization.
 - Use random UUIDs to prevent your pastes being accessed by others.
-- Use sqlite to store data.
+- Use SQLite to store data.
+- Use reCAPTCHA v3 as protection.
 
 ## Features
 
