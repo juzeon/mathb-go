@@ -59,7 +59,7 @@ func getPaste(c *gin.Context) {
 	}
 	c.HTML(200, "mathb.html", MathBData{
 		Class: "class='post'",
-		Code:  template.HTML(paste.Code),
+		Code:  paste.Code,
 		Title: template.HTML(paste.Title),
 		Name:  template.HTML(paste.Name),
 		Error: "",

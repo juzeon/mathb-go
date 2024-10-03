@@ -4,7 +4,7 @@ import "html/template"
 
 type MathBData struct {
 	Class template.HTMLAttr
-	Code  template.HTML
+	Code  string
 	Title template.HTML
 	Name  template.HTML
 	Error template.HTML
