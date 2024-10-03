@@ -1,6 +1,6 @@
 # MathB-Go
 
-MathB is a mathematics pastebin software, a [MathB](https://github.com/susam/mathb) successor.  It is a web-based service meant for sharing snippets of mathematical text with others on the world wide web. It is rewritten in Go and with additional security enhancement.
+MathB is a mathematics pastebin software, a [MathB](https://github.com/susam/mathb) successor.  It is a web-based service meant for sharing snippets of mathematical text with others on the world wide web. It is rewritten in Go and with additional security enhancement. [Demo](https://mathb.littlera.in/).
 
 ## Enhancements compared to the original version
 
