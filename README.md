@@ -26,6 +26,8 @@ Requirement: Go 1.23+
 ```
 git clone https://github.com/juzeon/mathb-go.git
 cd mathb-go/
+cp config.yml.example config.yml
+vim config.yml # Fill in your reCAPTCHA v3 keys
 go build
 ./mathb-go
 # Visit: http://localhost:7156/

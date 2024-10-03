@@ -5,11 +5,18 @@
     <script src="js/mathb/options.js"></script>
     <script src="js/texme/texme.js"></script>
     <script src="js/mathb/mathb.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <link rel="stylesheet" type="text/css" href="css/mathb.css">
     <link rel="stylesheet" type="text/css" href="css/view.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+      <script>
+          function onSubmit(token) {
+              console.log('submit')
+              document.getElementById("form").submit();
+          }
+      </script>
   </head>
   <body>
     <header>
@@ -25,7 +32,10 @@
         <textarea id="code" name="code" placeholder="Enter LaTeX and Markdown code here.  Enclose inline math within $ and $, or \( and \).  Enclose displayed math within $$ and $$, or \[ and \].  The following commands work outside math mode: \ref, \eqref, \begin, \end and \$.  Put spaces on both sides of less-than sign." required>{{ .Code }}</textarea>
         <input id="title" name="title" value="{{ .Title }}" placeholder="Title (Optional)">
         <input id="name" name="name" value="{{ .Name }}" placeholder="Name (Optional)">
-        <input id="submit" type="submit" name="submit" value="Save &amp; Get URL">
+        <input id="submitButton" type="button" name="submitButton" value="Save &amp; Get URL" class="g-recaptcha"
+               data-sitekey="{{ .Sitekey }}"
+               data-callback='onSubmit'
+               data-action='submit'>
       </form><div id="output">
         <div id="sheet">
           <div id="view">
