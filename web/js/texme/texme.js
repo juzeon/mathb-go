@@ -72,9 +72,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     // Update "Configuration Options" section of README.md if any of the
     // following URLs is updated.
     options.markdownURL =
-      'https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js'
+      'https://cdnjs.cloudflare.com/ajax/libs/marked/14.1.2/marked.min.js'
     options.MathJaxURL =
-      'https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js'
+      'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
   }
 
   /**
