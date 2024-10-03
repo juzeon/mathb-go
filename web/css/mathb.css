@@ -1,0 +1,207 @@
+body {
+  color: #333;
+  font-family: georgia, serif;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+a:link {
+  color: #00e;
+}
+a:visited {
+  color: #518;
+}
+a:focus, a:hover {
+  color: #03f;
+}
+a:active {
+  color: #e00;
+}
+header h1 {
+  text-align: center;
+  margin: 0.5em 0;
+}
+header h1 a:link, header h1 a:visited {
+  color: #333;
+  text-decoration: none;
+}
+header h1 a:focus, header h1 a:hover {
+  color: #555;
+  text-decoration: underline;
+}
+header nav {
+  display: none;
+}
+footer hr {
+  border: none;
+  border-bottom: thin dotted #666;
+  margin: 1em 0;
+}
+form {
+  background: #eee;
+  border: thin solid #ccc;
+  padding: 1em;
+}
+textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem;
+  min-height: 10rem;
+}
+#view {
+  box-sizing: border-box;
+  min-height: calc(100vh - 38em);
+}
+input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+#submit, #copy {
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#output {
+  margin-top: 1em;
+}
+#sheet {
+  border: thin solid #999;
+  overflow: auto;
+}
+#output {
+  box-sizing: border-box;
+}
+#copy {
+  width: 25%;
+}
+footer div {
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer nav, footer nav + p {
+  text-align: center;
+}
+footer nav a {
+  line-height: 2.5em;
+}
+header nav a, footer nav a {
+  margin-right: 2em;
+}
+header nav a:last-child, footer nav a:last-child {
+  margin-right: 0;
+}
+#view {
+  padding: 1em;
+}
+#date {
+  font-size: small;
+  color: #666;
+  line-height: 1.5rem;
+  text-align: right;
+  padding: 0 1rem;
+}
+noscript, #error {
+  font-size: large;
+  color: #f00;
+  border-color: #f00;
+}
+#error {
+  margin-bottom: 1em;
+}
+#widget {
+  display: none;
+}
+.post #widget {
+  display: block;
+}
+@media screen and (min-width: 50em) {
+  header h1 {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+  }
+  header nav {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+  }
+  form, #output {
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(50% - 0.5em);
+    vertical-align: top;
+  }
+  textarea {
+    min-height: calc(100vh - 19rem);
+  }
+  #output {
+    margin-left: 1em;
+    margin-top: 0em;
+  }
+  #url {
+    display: inline-block;
+    width: 75%;
+  }
+  #copy {
+    display: inline-block;
+    margin-left: 1em;
+    width: calc(25% - 1em);
+  }
+  #view {
+    min-height: calc(100vh - 12em);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    color: #bbb;
+  }
+  a:link {
+    color: #9bf;
+  }
+  a:visited {
+    color: #caf;
+  }
+  a:focus, a:hover {
+    color: #9cf;
+  }
+  a:active {
+    color: #faa;
+  }
+  header h1 a:link, header h1 a:visited {
+    color: #bbb;
+  }
+  header h1 a:focus, header h1 a:hover {
+    color: #ddd;
+  }
+  form {
+    background: #222;
+  }
+  input, textarea, button {
+    background: #000;
+    color: #bbb;
+  }
+  form, input, textarea, button, #output {
+    border-color: #666;
+  }
+  noscript, #error {
+    color: #f99;
+    border-color: #f99;
+  }
+}
+@media print {
+  header, form, footer, #date, .post #widget {
+    display: none;
+  }
+  #sheet {
+    border: 0;
+  }
+}

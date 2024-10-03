@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ .StatusCode }} {{ .ReasonPhrase }}</title>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        body {background: #111; color: #bbb}
+        a:link {color: #9bf}
+        a:visited {color: #caf}
+        a:active {color: #faa}
+      }
+    </style>
+  </head>
+  <body style="text-align: center">
+    <h1>{{ .StatusCode }} {{ .ReasonPhrase }}</h1>
+    <hr>
+    <a href="/">MathB.in</a>
+  </body>
+</html>

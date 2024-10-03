@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MathB-Go - Share Mathematics with LaTeX and Markdown, with enhanced security</title>
+    <script src="js/mathb/options.js"></script>
+    <script src="js/texme/texme.js"></script>
+    <script src="js/mathb/mathb.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mathb.css">
+    <link rel="stylesheet" type="text/css" href="css/view.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">MathB-Go</a></h1><nav>
+        <a href="/">New</a>
+        <a href="/1">Demo</a>
+        <a href="/2">Tutorial</a>
+        <a href="/3">About</a>
+      </nav>
+    </header>
+    <main{{ .Class }}>
+      <form id="form" method="post" action="/">
+        <textarea id="code" name="code" placeholder="Enter LaTeX and Markdown code here.  Enclose inline math within $ and $, or \( and \).  Enclose displayed math within $$ and $$, or \[ and \].  The following commands work outside math mode: \ref, \eqref, \begin, \end and \$.  Put spaces on both sides of less-than sign." required>{{ .Code }}</textarea>
+        <input id="title" name="title" value="{{ .Title }}" placeholder="Title (Optional)">
+        <input id="name" name="name" value="{{ .Name }}" placeholder="Name (Optional)">
+        <input id="submit" type="submit" name="submit" value="Save &amp; Get URL">
+      </form><div id="output">
+        <div id="sheet">
+          <div id="view">
+            {{ .Error }}<noscript>
+              ERROR: JavaScript must be enabled to render input!
+            </noscript>
+          </div>
+          <div id="date">{{ .Date }}</div>
+        </div>
+        <div id="widget">
+          <input id="url" readonly><input id="copy" type="button" value="Copy URL">
+        </div>
+      </div>
+    </main>
+    <footer>
+      <hr>
+      <div>
+        <nav>
+          <a href="/">New</a>
+          <a href="/1">Demo</a>
+          <a href="/2">Tutorial</a>
+          <a href="/3">About</a>
+          <a href="/4">Privacy</a>
+          <a href="https://github.com/juzeon/mathb-go">GitHub</a>
+          <a href="https://blog.skyju.cc">Blog</a>
+        </nav>
+        <p>
+          This is free and open source software.  The source code of
+          this website is available on
+          <a href="https://github.com/juzeon/mathb-go">GitHub</a>
+          under the terms of the
+          <a href="https://github.com/juzeon/mathb-go/LICENSE">MIT
+          License</a>.  To report bugs, suggest improvements, or ask
+          questions, <a href="https://github.com/juzeon/mathb-go/issues">create
+          a new issue</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
